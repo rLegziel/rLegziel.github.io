@@ -34,9 +34,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
-markdown: kramdown
-  input: GFM
-  syntax_highlighter: rouge
+# markdown: kramdown
+#   input: GFM
+#   syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default.
