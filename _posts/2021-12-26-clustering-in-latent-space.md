@@ -34,10 +34,12 @@ For this architecture, we use a composite loss function: KL divergence plus the 
 
 ![Fig 2:VAE Architecture used]({{ "/images/assets/VAEArchitecture3.png"  | absolute_url}})
 
-where $q_{\phi}$  is the approximation function, $z$ is the latent space representation,
+where $$q_{\phi}$$  is the approximation function, $$z$$ is the latent space representation,
 $X$ and $X'$ are the input and the output respectively
 
-### All algorithms above were used to create a 3-dimensional embedding, so we can visualize it effectively and get some intuition based on visualization
+
+
+All algorithms above were used to create a 3-dimensional embedding, so we can visualize it effectively and get some intuition based on visualization
 
 
 ## Data
@@ -64,6 +66,7 @@ Thus, we can also easily evaluate the classification model recall, precision and
 ## Results
 
 ### Classification Scores
+
 | Algorithm   | Accuracy          | Recall             | Precision         |
 |-------------|-------------------|--------------------|-------------------|
 | Baseline    | 0.302 $\pm$ 0.034 | 0.201 $\pm$ 0.034  | 0.714 $\pm$ 0.205 |   
@@ -73,6 +76,7 @@ Thus, we can also easily evaluate the classification model recall, precision and
 
 
 ### Clustering Scores
+
 | Algorithm   | Silhouette Score | CH index | DB Score |
 |-------------|------------------|----------|----------|
 | Baseline    | 0.246            | 134.801  | 1.611    |
