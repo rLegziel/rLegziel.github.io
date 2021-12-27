@@ -36,7 +36,7 @@ For this architecture, we use a composite loss function: KL divergence plus the 
 ![Fig 2:VAE Architecture used]({{ "/images/assets/VAEArchitecture3.png"  | absolute_url}})
 
 where $$q_{\phi}$$  is the approximation function, $$z$$ is the latent space representation,
-$X$ and $X'$ are the input and the output respectively
+$$X$$ and $$X'$$ are the input and the output respectively
 
 
 
