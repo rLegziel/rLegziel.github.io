@@ -29,7 +29,7 @@ url: "https://rlegziel.github.io" # the base hostname & protocol for your site, 
 github_username:  rlegziel
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
 
