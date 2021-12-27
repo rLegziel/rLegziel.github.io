@@ -71,7 +71,7 @@ Thus, we can also easily evaluate the classification model recall, precision and
 | Algorithm   | Accuracy          | Recall             | Precision         |
 |-------------|-------------------|--------------------|-------------------|
 | Baseline    | 0.302 \[\pm\] 0.034 | 0.201 $\pm$ 0.034  | 0.714 $\pm$ 0.205 |   
-| PCA         | 0.966 $\pm$ 0.008 | 0.966 $\pm$ 0.008  | 0.974 $\pm$ 0.008 |   
+| PCA         | 0.966 $$\pm$$ 0.008 | 0.966 $\pm$ 0.008  | 0.974 $\pm$ 0.008 |   
 | Autoencoder | 0.966 $\pm$ 0.007 | 0.966 $\pm$ 0.006  | 0.973 $\pm$ 0.007 |   
 | VAE         | **0.985** $\pm$ 0.005 | **0.985**  $\pm$ 0.004 | **0.986** $\pm$ 0.005 |
 
