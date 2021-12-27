@@ -3,6 +3,7 @@ layout: post
 title:  "Clustering in Latent Space"
 date:   2021-12-26 16:02:19 
 categories: AI
+usemathjax: true
 
 ---
 # Clustering in Latent Space
