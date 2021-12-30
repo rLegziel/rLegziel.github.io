@@ -38,7 +38,7 @@ For this architecture, we use a composite loss function: KL divergence plus the 
 
 ![Fig 2:VAE Architecture used]({{ "/images/assets/VAEArchitecture3.png"  | absolute_url}})
 
-where \[q_{\phi}\]  is the approximation function, $$z$$ is the latent space representation,
+where $$q_{\phi}$$  is the approximation function, $$z$$ is the latent space representation,
 $$X$$ and $$X'$$ are the input and the output respectively
 
 
@@ -47,7 +47,7 @@ All algorithms above were used to create a 3-dimensional embedding, so we can vi
 
 
 ## Data
-Without going into too much details about the dataset, I can say that it is small, homogenuous and required domain knowledge to perform feature extraction and filtering. Another constraint was that we wanted to ensure that the resulting embeddings will generalize well towards further unseen.
+Without going into much details about the dataset, I can say that it is small, homogenuous and required domain knowledge to perform feature extraction and filtering. Another constraint was that we wanted to ensure that the resulting embeddings will generalize well towards further unseen.
 We had approximately 30 features and 900 instances.
 
 
@@ -73,10 +73,10 @@ Thus, we can also easily evaluate the classification model recall, precision and
 
 | Algorithm   | Accuracy          | Recall             | Precision         |
 |-------------|-------------------|--------------------|-------------------|
-| Baseline    | 0.302 \[\pm\] 0.034 | 0.201 $\pm$ 0.034  | 0.714 $\pm$ 0.205 |   
-| PCA         | 0.966 $$\pm$$ 0.008 | 0.966 $\pm$ 0.008  | 0.974 $\pm$ 0.008 |   
-| Autoencoder | 0.966 $\pm$ 0.007 | 0.966 $\pm$ 0.006  | 0.973 $\pm$ 0.007 |   
-| VAE         | **0.985** $\pm$ 0.005 | **0.985**  $\pm$ 0.004 | **0.986** $\pm$ 0.005 |
+| Baseline    | 0.302 $$\pm$$ 0.034 | 0.201 $$\pm$$ 0.034  | 0.714 $$\pm$$ 0.205 |   
+| PCA         | 0.966 $$\pm$$ 0.008 | 0.966 $$\pm$$ 0.008  | 0.974 $$\pm$$ 0.008 |   
+| Autoencoder | 0.966 $$\pm$$ 0.007 | 0.966 $$\pm$$ 0.006  | 0.973 $$\pm$$ 0.007 |   
+| VAE         | **0.985** $$\pm$$ 0.005 | **0.985**  $$\pm$$ 0.004 | **0.986** $$\pm$$ 0.005 |
 
 
 ### Clustering Scores
@@ -101,7 +101,23 @@ We can see here that many of the clusters are relatively dispersed and have some
 
 ![Fig 5:VAE Visualization]({{ "/images/assets/vaeRotatedPlotCropped.png"  | absolute_url}})
 
-This visualization is significantly different. All points seem to be closer together and the whole distribution seem much smoother. Each band on its own seems gaussian and the whole distribution also seems gaussian. Clusters are also closer overall closer together. It seems like the cluster divisions are relatively straight such that every cluster occupies a certain slice of of the embedding space.
+This visualization is significantly different. All points seem to be closer together and the whole distribution is much smoother. Each band on its own is approximately gaussian and thus whole distribution is aswell. Clusters are also overall closer together. cluster divisions are in relatively straight lines such that every cluster occupies a certain slice of of the embedding space.
+
+## Discussion
+
+These results seem counterintuitive; a smoother representation isn't thought to be the one that maximizes the differences in a dataset.
+
+There is no straightforward way to gauge the goodness of a represntation due to their inherent unsupervised nature. 
+
+### Possible pitfalls of methods used
+In order to still be critical about our results, we first look at possible pitfalls of the techniques used:
+- PCA reformulates the dimensionality reduction problem as a linear change of basis(there are non-linear extentions to PCA, but they aren't discusssed here). It also assumes that components are orthogonal to one another. Can we be sure that these assumptions hold for our dataset?
+- PCA considers features with more variance to be more meaningful and regards ones with low variance as noise. This isn't an assumption we can easily accept in this case due to our extremely homogenuous dataset.
+- AE and VAE are much less explainable than PCA due to their architecture. 
+
+### Visual overfitting
+
+
 
 
 
