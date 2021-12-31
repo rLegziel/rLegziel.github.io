@@ -116,6 +116,18 @@ In order to still be critical about our results, we first look at possible pitfa
 - AE and VAE are much less explainable than PCA due to their architecture. 
 
 ### Visual overfitting
+We aim to create a representation that will best generalize towards potentially different unseen data. In this case, we also know that the dataset is very homogenuous and thus pay more attention to the models ability to generalize.
+
+One way to view overfitting in a represntation is whether the model produces many small and distant clusters. If the model maps every small change in the data as its own distant cluster we can assume that its overfitting especially because we know that our data points are very similar to one another. 
+Thus, we want a smoother and more continuous representation without much outliers which is also shown to correspond to a more disentangled representation.
+
+### Metrics in context
+
+We established we want a smoother and continuous representation. This means that we shouldn't optimize towards the highest silhouette score.
+High silhouette score would mean that the the mean of all pairwise distances is small (thus the cluster is dense) and the pairwise distances to all points in the nearest cluster are large (thus the cluster distant).
+
+
+
 
 
 
