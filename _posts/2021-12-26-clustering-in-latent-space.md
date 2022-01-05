@@ -20,6 +20,8 @@ Embeddings (or latent space representations) are an alternative representation f
 
 All algorithms described above do not require any labeled data and can be used as a stepping stone toward an effective self-supervised structure.
 
+
+
 ## Algorithms
 
 ### PCA
@@ -46,13 +48,16 @@ $$X$$ and $$X'$$ are the input and the output respectively
 All algorithms above were used to create a 3-dimensional embedding, so we can visualize it effectively and get some intuition based on visualization
 
 
+
 ## Data
 Without going into much details about the dataset, I can say that it is small, homogenuous and required domain knowledge to perform feature extraction and filtering. Another constraint was that we wanted to ensure that the resulting embeddings will generalize well towards further unseen.
 We had approximately 30 features and 900 instances.
 
 
+
 ## Clustering Algorithm
 In this case, we used Agglomerative Clustering implemented by sklearn and used 5 clusters as baseline
+
 
 
 ## Metrics
@@ -65,6 +70,7 @@ In this case, we used Agglomerative Clustering implemented by sklearn and used 5
 
 Moreover, we cab also use the labels from the clustering as classes to be used by a classification algorithm.
 Thus, we can also easily evaluate the classification model recall, precision and accuracy.
+
 
 
 ## Results
@@ -89,6 +95,7 @@ Thus, we can also easily evaluate the classification model recall, precision and
 | VAE         | 0.521           | **2684.568** | **0.539**    |
 
 
+
 ## Visualizations
 
 ![Fig 3:PCA Visualization]({{ "/images/assets/pcaRotatedPlotCropped.png"  | absolute_url}})
@@ -106,11 +113,15 @@ We can see here that many of the clusters are relatively dispersed and have some
 
 This visualization is significantly different. All points seem to be closer together and the whole distribution is much smoother. Each band on its own is approximately gaussian and thus whole distribution is aswell. Clusters are also overall closer together. cluster divisions are in relatively straight lines such that every cluster occupies a certain slice of of the embedding space.
 
+
+
 ## Discussion
 
 These results seem counterintuitive; a smoother representation isn't thought to be the one that maximizes the differences in a dataset.
 
 There is no straightforward way to gauge the goodness of a represntation due to their inherent unsupervised nature. 
+
+
 
 ### Possible pitfalls of methods used
 In order to still be critical about our results, we first look at possible pitfalls of the techniques used:
@@ -118,11 +129,15 @@ In order to still be critical about our results, we first look at possible pitfa
 - PCA considers features with more variance to be more meaningful and regards ones with low variance as noise. This isn't an assumption we can easily accept in this case due to our extremely homogenuous dataset.
 - AE and VAE are much less explainable than PCA due to their architecture. 
 
+
+
 ### Visual overfitting
 We aim to create a representation that will best generalize towards potentially different unseen data. In this case, we also know that the dataset is very homogenuous and thus pay more attention to the models ability to generalize.
 
 One way to view overfitting in a represntation is whether the model produces many small and distant clusters. If the model maps every small change in the data as its own distant cluster we can assume that its overfitting especially because we know that our data points are very similar to one another. 
 Thus, we want a smoother and more continuous representation without much outliers which is also shown to correspond to a more disentangled representation.
+
+
 
 ### Metrics in context
 
