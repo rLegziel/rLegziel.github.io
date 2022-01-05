@@ -99,7 +99,9 @@ Thus, we can also easily evaluate the classification model recall, precision and
 ## Visualizations
 
 ![Fig 3:PCA Visualization]({{ "/images/assets/pcaRotatedPlotCropped.png"  | absolute_url}})
-*PCA visualization*
+<p align="center">
+    *PCA visualization*
+</p>
 
 We can see a red-flag in the plot, even though the clustering itself seems reasonable. We can see that the explained variance by each principal component is very small, and even the top 3 components account for only 49% of explained variance.
 
