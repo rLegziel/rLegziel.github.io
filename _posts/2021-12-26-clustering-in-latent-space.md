@@ -92,14 +92,17 @@ Thus, we can also easily evaluate the classification model recall, precision and
 ## Visualizations
 
 ![Fig 3:PCA Visualization]({{ "/images/assets/pcaRotatedPlotCropped.png"  | absolute_url}})
+*PCA visualization*
 
 We can see a red-flag in the plot, even though the clustering itself seems reasonable. We can see that the explained variance by each principal component is very small, and even the top 3 components account for only 49% of explained variance.
-S
+
 ![Fig 4:AE Visualization]({{ "/images/assets/aeRotatedPlotCropped.png"  | absolute_url}})
+*AE visualization*
 
 We can see here that many of the clusters are relatively dispersed and have some points that seem further away from the rest of the cluster of even small clusters within one (The purple and orange clusters are good examples).
 
 ![Fig 5:VAE Visualization]({{ "/images/assets/vaeRotatedPlotCropped.png"  | absolute_url}})
+*VAE visualization*
 
 This visualization is significantly different. All points seem to be closer together and the whole distribution is much smoother. Each band on its own is approximately gaussian and thus whole distribution is aswell. Clusters are also overall closer together. cluster divisions are in relatively straight lines such that every cluster occupies a certain slice of of the embedding space.
 
