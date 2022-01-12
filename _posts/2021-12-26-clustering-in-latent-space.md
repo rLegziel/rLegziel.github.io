@@ -144,7 +144,10 @@ Thus, we want a smoother and more continuous representation without much outlier
 ### Metrics in context
 
 We established we want a smoother and continuous representation. This means that we shouldn't optimize towards the highest silhouette score.
-High silhouette score would mean that the the mean of all pairwise distances is small (thus the cluster is dense) and the pairwise distances to all points in the nearest cluster are large (thus the cluster distant).
+High silhouette score would mean that the the mean of all pairwise distances is small (thus the cluster is dense) and the pairwise distances to all points in the nearest cluster are large (thus the cluster distant) and dense distant clusters would lead to a discontinuous representation.
+
+
+
 
 
 
