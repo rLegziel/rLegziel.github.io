@@ -46,6 +46,7 @@ $$X$$ and $$X'$$ are the input and the output respectively
 
 &nbsp;
 
+### Algorithmic Choices
 - Architecture for VAE and AE were chosen based on performance - smaller and larger network were considered aswell as different activation functions.
 - All algorithms above were used to create a 3-dimensional embedding, so we can visualize it effectively and get some intuition based on visualization
 
