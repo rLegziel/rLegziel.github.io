@@ -14,8 +14,16 @@ permalink: /CV/
 
 ## Work Experience
 
+**Language Engineer**                                        
+*M47 Labs* | *February 2022 - Current*
+
+• Contribute to the codebase of the worlds most popular voice assistant
+• Machine learning model optimization
+• Supervises data curation processes aswell as novel data processing and augmentation techniques
+
+
 **Data Scientist**                                        
-*Dephion* | *September 2019 - Present*
+*Dephion* | *September 2019 - February 2022*
 
 • Created and deployed an end-to-end physical activity classification model from mobile sensor data using 
 PostgreSQL, pandas and scikit-learn. The model achieved 94% accuracy. \
@@ -35,5 +43,5 @@ behaviour and habit formation domain.
 **BSc (Honours) Data Science and Artificial Intelligence**   \
  *Maastricht University* | *Sept 2018 - June 2021* \
 • Graduate of KE@Work Honours program \
-• Concluded the degree with the thesis: 'Leveraging Representation Learning for User-session Categorization in Habtic' which was awarded a score of 8.5. 
+
 
