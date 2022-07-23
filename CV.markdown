@@ -17,8 +17,8 @@ permalink: /CV/
 **Language Engineer**                                        
 *M47 Labs* | *February 2022 - Current*
 
-• Contribute to the codebase of the worlds most popular voice assistant
-• Machine learning model optimization
+• Contribute to the codebase of the worlds most popular voice assistant \
+• NLP model optimization through analysis and data augmentation \
 • Supervises data curation processes aswell as novel data processing and augmentation techniques
 
 
